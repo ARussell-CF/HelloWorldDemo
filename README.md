@@ -18,3 +18,12 @@ This is a link with hover text [Mini Site Example](https://superdogevents.coderf
 If you have images in the repo you can include them too
 
 ![A Dog](/HelloWorldDemo/Images/download.jpg)
+
+1. These
+2. Are
+3. List
+4. Items
+
+- List
+- Without
+- Numbers
