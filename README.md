@@ -64,7 +64,7 @@ If you have images in the repo you can include them too
 | And    | Dashes            |
 | But    | They take A       |
 
-| You   | Can   | Get   |
+| You   | Can   | Get By   |
 | :---  | :---: | ---:  |
 |Without having | them aligned | as long|
 |as | the | number of pipes |
