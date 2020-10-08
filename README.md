@@ -45,4 +45,11 @@ If you have images in the repo you can include them too
 > Block Quotes
 >
 > Can be used
+>
 > To create visual distinction
+
+>But to make a *line break*
+>
+>**You need** to have
+>
+>A ***full line in the*** markdown file
