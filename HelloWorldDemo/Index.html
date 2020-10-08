@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--<meta title="I show up in Google results" />
+    <meta description="I'm not really necessary right now">-->
+    <title>'Ello World!</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/CustomCss.css" rel="stylesheet" />
+    <link rel="icon" href="Images/favicon-16x16.png" type="image/gif" sizes="16x16">
+    <style>
+        h1 {
+            font-size: 72px;
+            background: -webkit-linear-gradient(#ff993b,#ff993b, #ff0000, #ff1111, #444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>This is my header</h1>
+    <!--<button id="btnFizzBuzz">Another button</button>
+    <div class="container">
+        <h1 class="text-center">Math Functions</h1>
+        <div class="row">
+            <div class="col">
+                <input id="input1" type="text" />
+                <input id="input2" />
+                <input id="input3" />
+                <input id="input4" />
+                <input id="input5" />
+            </div>
+            <div class="col">
+                <button title="min" class=" btn btn-primary" id="minBtn">MIN</button>
+                <button title="max" class=" btn btn-primary" id="maxBtn"> MAX</button>
+                <button title="mean" class=" btn btn-primary" id="meanBtn">MEAN</button>
+                <button title="sum" class=" btn btn-primary" id="sumBtn">SUM</button>
+                <button title="product" class=" btn btn-primary" id="productBtn">PRODUCT</button>
+            </div>
+            <span class="" id="printBox"></span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row h2">Reverse A String</div>
+        <div class="row">
+            <div class="col-4"><input type="text" id="reverseString" /></div>
+            <div class="col-4"><button class="btn btn-warning" id="flipBtn">Flip The String</button></div>
+            <div class="col-4"><span id="reverseOutput"></span></div>
+        </div>
+    </div>
+    <section id="services" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 offset-2">
+                    <h2 class="text-center ">Demo</h2>-->
+    <!--<h3>Fizzbuzz</h3>-->
+    <!--<div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Multiples</span>
+                        </div>
+                        <input type="number" id="fizz1">
+                        <input type="number" id="fizz2">
+
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Range</span>
+                        </div>
+                        <input type="number" id="start">
+                        <input type="number" id="end">
+                    </div>
+                    <button class="btn btn-primary" id="fizzBtn">fizzbuzz</button>
+                </div>
+            </div>
+        </div>
+        <span id="testfb"></span>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <span id="resultfb"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>-->
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="fbProgress"></div>
+    </div>
+    <button id="progTest">Prog Test</button>
+    <section id="shyannTC">
+        <div class="container">
+
+            <!--Page Title-->
+            <div class="row">
+                <div class="col text-center">
+                    <h1 class="mt-5">TACO 🌮 CAT</h1>
+                </div>
+            </div>
+
+            <hr />
+            <!--Input Row-->
+            <div class="row">
+                <div class="col text-center" id="inputTaco">
+                    <input type="text" id="inputBoxSJ" name="palindrome" size="40" placeholder="Write your text here...">
+                </div>
+            </div>
+
+            <p></p>
+            <!--Button Row-->
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn btn-default" id="tacoButton">
+                        Verify Palindrome
+                    </button>
+                </div>
+            </div>
+
+            <!--Modal Pop Up-->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <h1>Results</h1>
+                            <p>
+                                "<span class="mt-5" id="result"></span>"
+                                <br />
+                                <span class="mt-5" id="result2"></span>
+                            </p>
+                        </div>
+                        <div class="modal-footer text-center">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/confetti.js"></script>
+    <!--Custom JS-->
+    <script>
+
+        //Flip, Split, Join function
+        function flipSplit(word) {
+            let flipped = word.split("").reverse().join("");
+            document.getElementById("result").innerHTML = flipped;
+            return flipped;
+        }
+
+        //Button Event
+        document.getElementById("tacoButton").addEventListener('click', function () {
+            //Step 1: Get User Input
+            var userWord = document.getElementById("inputBoxSJ").value;
+            var modifiedWord = userWord.toLowerCase().replace(/ /g, "");
+            //Step 2: Do Something With Input
+            var reversedWord = flipSplit(modifiedWord)
+            //Step 3: Display Result to User
+            if (modifiedWord == reversedWord) {
+                document.getElementById("result2").innerHTML = `<h5>YES! This is a palindrome.</h5>`;
+                confetti.start(1000);
+            }
+            else {
+                document.getElementById("result2").innerHTML = `<h5>SORRY, this is not a palindrome.</h5>`;
+            }
+
+        });
+
+    </script>
+
+    <script>
+        document.getElementById('progTest').addEventListener('click', function () {
+            PBarTest();
+        })
+        function PBarTest() {
+            ProgressBar(10);
+            sleep(1000);
+            ProgressBar(20);
+            sleep(1000);
+            ProgressBar(30);
+            sleep(1000);
+            ProgressBar(40);
+            sleep(1000);
+            ProgressBar(50);
+            sleep(1000);
+            ProgressBar(60);
+            sleep(1000);
+            ProgressBar(70);
+            sleep(1000);
+            ProgressBar(80);
+            sleep(1000);
+            ProgressBar(90);
+            sleep(1000);
+            ProgressBar(100);
+        }
+
+        function ProgressBar(num) {
+            document.getElementById("fbProgress").style.width = num + "%";
+
+        }
+        function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+                currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+        }
+    </script>
+
+
+
+    <!--<script>
+        document.getElementById("sumBtn").addEventListener('click', function () {
+            let input1 = Number(document.getElementById("input1").value);
+            let input2 = Number(document.getElementById("input2").value);
+            let input3 = Number(document.getElementById("input3").value);
+            let input4 = Number(document.getElementById("input4").value);
+            let input5 = Number(document.getElementById("input5").value);
+
+            const printBox = document.getElementById("printBox");
+            const printBox2 = document.getElementById("printBox2");
+            if (input1 != 0 && input2 != 0 && input3 != 0 && input4 != 0 && input5 != 0) {
+                writeToDOM("printBox", sumFunction(input1, input2, input3, input4, input5));
+                printBox2.innerHTML = multiplyFunction(input1, input2, input3, input4, input5);
+            }
+            else {
+                alert("Please enter 5 non-zero numbers");
+                confetti.start(5000);
+            }
+        });
+        //|| - OR operand - if any of the conditions are true the if statement will run
+        //&& - AND operand - only if all of the conditions are true the if statement will run
+
+        //= - Assignment the left side now equals the right side
+        //== - value comparison - does the left side carry the same value as the right side
+        //=== - value and type comparison - does the left side carry the same value of the same type as the right side
+        //int test = 5
+        //float test2 = 5
+
+        //test == test2 is true, both have a value of 5
+        //test === test2 is false, both have a value of 5 but test2 is of type float
+        function sumFunction(input1, input2, input3, input4, input5) {
+            return sumResult = input1 + input2 + input3 + input4 + input5;
+        }
+        function multiplyFunction(n1, n2, n3, n4, n5) {
+            return Number(n1) * Number(n2) * Number(n3) * Number(n4) * Number(n5);
+        }
+
+        function writeToDOM(id, result) {
+            document.getElementById(id).innerHTML = result;
+        }
+    </script>
+    <script>
+        //For Loop work space
+        document.getElementById("flipBtn").addEventListener("click", function () {
+            //Here is what happens when the button is clicked
+            //Step 1
+            //Get ye olde data
+            let inputWord = document.getElementById("reverseString").value;
+
+            //Step 2
+            //Work with aforementioned data
+            let lowerInput = inputWord.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]|\s/gi, '');
+            let reverseWord = "";
+            //First is the loop variable followed by a ;
+            //Second is the terminator
+            //Third is what happens after each loop ++ = add 1, -- = subtract 1
+            //[] indicates array position
+            //A string is an array of characters
+            //string word = [w][o][r][d]
+            //               0  1  2  3
+            //Without the -1 you get index out of range exception
+            //Maybe there is a JavaScript method to make all the letters LowerCase
+            //Maybe you want to store four variables, the original input, that reversed, and the lowercase version
+            //of each for comparison
+            for (let loop = inputWord.length - 1; loop >= 0; loop--) {
+                reverseWord += lowerInput.charAt(loop);
+            }
+            let otherReverse = lowerInput.split("").reverse().join("");
+            //Step 3
+            //Spit it back out
+            if (lowerInput == reverseWord) {
+                alert(otherReverse);
+            }
+            else {
+                alert("Do Better");
+            }
+            document.getElementById("reverseOutput").innerHTML = reverseWord;
+        })
+    </script>
+    <script>
+        document.getElementById("fizzBtn").addEventListener('click', function () {
+            let userNum1 = parseInt(document.getElementById("fizz1").value);
+            let userNum2 = parseInt(document.getElementById("fizz2").value);
+            let rangeStart = parseInt(document.getElementById("start").value);
+            let rangeEnd = parseInt(document.getElementById("end").value);
+            if (isNaN(userNum1) || isNaN(userNum2) || isNaN(rangeStart) || isNaN(rangeEnd)) {
+                alert("Need numbers!");
+            }
+            else {
+                fizzbuzz(userNum1, userNum2, rangeStart, rangeEnd);
+                $("#myModal").modal();
+
+            }
+        })
+    </script>
+    <script>
+        function fizzbuzz(userNum1, userNum2, rangeStart, rangeEnd) {
+            let newArr = [];
+            for (i = rangeStart; i <= rangeEnd; i++) {
+                if (i % userNum1 == 0 && i % userNum2 == 0) {
+                    newArr.push("<span class ='fizzbuzz fizzbuzzGradient'>Fizzbuzz</span>");
+                }
+                else if (i % userNum1 == 0) newArr.push("<span class = 'fizz'>Fizz</span>");
+                else if (i % userNum2 == 0) newArr.push("<span class= 'buzz'>Buzz</span>");
+                else newArr.push(i);
+            }
+            let resultfb = newArr.join(", ");
+            document.getElementById("resultfb").innerHTML = `<b>${resultfb}</b>`;
+            document.getElementById("testfb").innerHTML = `<b>${resultfb}</b>`;
+
+        }
+
+    </script>
+    <script>
+        //My comments for the Fizz-Buzz Challenge:
+        //Wiring up an event handler for the click event of btnFizzBuzz
+        document.getElementById("btnFizzBuzz").addEventListener('click', function () {
+            //Step 1- Get user data if there is any
+            let fizz = Number(document.getElementById("btnFizzBuzz1").value); // usually 3
+            let buzz = Number(document.getElementById("btnFizzBuzz2").value); // usually 5
+
+            //Step 2- Run the user data through the function
+            let output = DoFizzBuzz(fizz, buzz);
+
+            //Step 3- Output the results of the FizzBuzz named function
+            document.getElementById("pFizzBuzz").innerHTML = output;
+
+        });
+
+        //A named function
+        function DoFizzBuzz(fizz, buzz) {
+            let output = "";
+
+            for (let loop = 1; loop <= 100; loop++) {
+                let fizzRemainder = loop % fizz;
+                let buzzRemainder = loop % buzz;
+                //Some calculation that looks at fizz and buzz to see if they are 0
+                if (fizzRemainder == 0) {
+                    output = "Fizz";
+                } else if (fizzRemainder === 0) {
+                    output = loop;
+                }
+                if (buzzRemainder == 0) {
+                    output = "Buzz";
+                } else if (buzzRemainder === 0) {
+                    output = loop;
+                }
+                if (fizzRemainder == 0 + buzzRemainder == 0) {
+                    output = "FizzBuzz";
+
+                    output += `loop value: ${loop} <br /> FR: ${loop} % ${fizz} = ${fizzRemainder} <br /> BR: ${loop} % ${buzz} = ${buzzRemainder} = BR: ${buzzRemainder} <br />`;
+
+                }
+            }
+            return output;
+
+        };
+
+    </script>-->
+</body>
+</html>
