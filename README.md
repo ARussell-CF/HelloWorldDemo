@@ -13,4 +13,4 @@ I work [here] (https://coderfoundry.com)
 Or you can link like this <coderfoundry.com>
 
 If you have images in the repo you can include them too
-![A Dog](/Images/download.jpg)
+![A Dog](../../HelloWorldDemo/Images/download.jpg)
