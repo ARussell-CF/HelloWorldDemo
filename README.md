@@ -8,7 +8,7 @@
 
 ***This is both bold and italic***
 
-I work [here] (https://coderfoundry.com)
+I work [here](https://coderfoundry.com)
 ---
 Or you can link like this <https://coderfoundry.com>
 ***
