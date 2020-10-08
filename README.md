@@ -49,10 +49,15 @@ If you have images in the repo you can include them too
 > To create visual distinction
 
 >But to make a *line break*
->
->**You need** to have
->
+>>
+>>**You need** to have
+>>
 >A ***full line in the*** markdown file
 >This
 >Is
 >Wrong
+| Tables | Are A Combination |
+| ------ | ----------------- |
+| Of     | Pipes             |
+| And    | Dashes            |
+| But   | They take A   |
