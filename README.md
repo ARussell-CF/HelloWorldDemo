@@ -56,8 +56,16 @@ If you have images in the repo you can include them too
 >This
 >Is
 >Wrong
+
+
 | Tables | Are A Combination |
 | ------ | ----------------- |
 | Of     | Pipes             |
 | And    | Dashes            |
-| But   | They take A   |
+| But    | They take A       |
+
+| You   | Can   | Get   |
+| :---  | :---: | ---:  |
+|Without having | them aligned | as long|
+|as | the | number of pipes |
+| is | | correct |
