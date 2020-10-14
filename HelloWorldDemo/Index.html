@@ -192,37 +192,16 @@
             PBarTest();
         })
         function PBarTest() {
-            ProgressBar(10);
-            sleep(1000);
-            ProgressBar(20);
-            sleep(1000);
-            ProgressBar(30);
-            sleep(1000);
-            ProgressBar(40);
-            sleep(1000);
-            ProgressBar(50);
-            sleep(1000);
-            ProgressBar(60);
-            sleep(1000);
-            ProgressBar(70);
-            sleep(1000);
-            ProgressBar(80);
-            sleep(1000);
-            ProgressBar(90);
-            sleep(1000);
-            ProgressBar(100);
+            for (let i = 0; i < 101; i++) {
+
+                ProgressBar(i);
+            }
+           
         }
 
         function ProgressBar(num) {
             document.getElementById("fbProgress").style.width = num + "%";
 
-        }
-        function sleep(milliseconds) {
-            const date = Date.now();
-            let currentDate = null;
-            do {
-                currentDate = Date.now();
-            } while (currentDate - date < milliseconds);
         }
     </script>
 
